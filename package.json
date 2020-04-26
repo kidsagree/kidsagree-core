@@ -1,0 +1,71 @@
+{
+  "name": "kidsagree",
+  "description": "kidsagree DApp",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kidsagree/kidsagree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kidsagree/kidsagree/issues"
+  },
+  "homepage": "https://github.com/kidsagree/kidsagree#readme",
+  "keywords": [
+    "kidsagree",
+    "ethereum",
+    "dapp",
+    "blockchain",
+    "startups"
+  ],
+  "author": "Kidsagree Institution MTU <contact@kidsagree.org>",
+  "contributors": [
+    "Ran Xing <rxing@kidsagree.org>"
+  ],
+  "dependencies": {
+    "@kidsagree/ui": "^0.1.0",
+    "date-fns": "^1.29.0",
+    "history": "^4.9.0",
+    "onecolor": "^3.0.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-media": "^1.10.0",
+    "react-motion": "^0.5.2"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.19.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier": "^1.19.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "update-assets": "rm -rf public/kidsagree-ui && cp -r node_modules/@kidsagree/ui/dist public/kidsagree-ui",
+    "lint": "eslint ./src",
+    "start": "npm run update-assets && react-scripts start",
+    "build": "npm run update-assets && PUBLIC_URL=/ react-scripts build",
+    "test": "npm run lint",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
